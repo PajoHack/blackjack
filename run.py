@@ -38,6 +38,21 @@ def calculate_score(cards):
     # Return the sum of the cards in the hand as the total score.
     return sum(cards)
 
+def compare(user_score, computer_score):
+    if user_score == computer_score:
+        return "Draw"
+    elif computer_score == 0:
+        return "You loose, Dealer has Blackjack"
+    elif user_score == 0:
+        return "You win with a Blackjack"
+    elif user_score > 21:
+        return "Bust! you went over 21"
+    elif computer_score > 21:
+        return "Dealer is bust! You win!"
+    elif user_score > computer_score:
+        return "You win"
+    else:
+        return "You lose"
 
 # Initialize lists to hold the user's and computer's cards.
 user_cards = []
