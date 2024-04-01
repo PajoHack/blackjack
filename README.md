@@ -1,39 +1,49 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+Blackjack Game in Python
+========================
 
-Welcome,
+This Python program simulates a simple game of Blackjack (also known as 21), where the player goes up against a computer dealer. The goal is to get a hand with a value as close to 21 as possible, without going over.
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+Features
+--------
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+-   The game is played with a simple console interface.
+-   A standard deck of cards is simulated, where each card's value is straightforward: numbers 2 through 10 are worth their face value, Jack/Queen/King are each worth 10, and Ace can be worth 1 or 11.
+-   The player and the computer (dealer) start with two cards. The player can see one of the dealer's cards.
+-   The player can choose to "Hit" to take another card or "Stand" to hold their total.
+-   The dealer must hit if their score is below 17.
+-   The game supports multiple rounds until the player decides to quit.
 
-## Codeanywhere Reminders
+How to Run
+----------
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
+Ensure you have Python installed on your system. This game uses the `random` module for card drawing, the `art` module for ASCII art (specifically for the Blackjack logo), and `os` module for clearing the console screen.
 
-`python3 -m http.server`
+Clone or download the project to your local machine.
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+Navigate to the directory containing the game file.
+Run the script: `python blackjack_game.py`
 
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
+Game Instructions
+-----------------
 
-`http_server`
+-   After starting the game, you will be asked if you want to play a game of Blackjack. Type `'y'` for yes or `'n'` for no.
+-   If you choose to play, the game will begin, and you'll be dealt two cards.
+-   You'll see your cards and the total score, as well as one of the dealer's cards.
+-   Choose whether to "Hit" or "Stand":
+    -   Type `'y'` to draw another card.
+    -   Type `'n'` to end your turn.
+-   After your turn ends, the dealer's turn will proceed automatically according to the rules.
+-   The game concludes when both you and the dealer have finished your turns. The winner will be announced based on the scores.
+-   You will then be asked if you want to play another round.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+Dependencies
+------------
 
-A button should appear to click: _Open Preview_ or _Open Browser_.
+-   Python 3.x
 
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+Disclaimer
+----------
 
-To log into the Heroku toolbelt CLI:
+This game is for educational purposes only. It simulates a Blackjack game and does not involve any real gambling.
 
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
----
-
-Happy coding!
+Enjoy the game, and feel free to contribute to its development!
