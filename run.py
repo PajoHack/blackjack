@@ -65,6 +65,17 @@ def compare(user_score, computer_score):
         return "You lose"
 
 
+def get_user_input(prompt):
+    """
+    Validates user input, ensuring it's either 'y' or 'n'.
+    """
+    while True:
+        user_input = input(prompt).lower()
+        if user_input in ['y', 'n']:
+            return user_input
+    else:
+        print("Invalid input. Please type 'y' for yes or 'n' for no.")
+
 
 def play_game():
     print(logo)
